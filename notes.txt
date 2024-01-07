@@ -1,0 +1,14 @@
+ lexemes are only the raw substrings of the source code
+ lexeme = group of char that has meaning
+ need to recognise how a lexeme looks like ('while' is a lexeme), and which kind of lexeme it represents
+ every token got a type, like 'while' can be a token, '2' can be a token of type literal
+ use regex to figure out what tokentype it is
+ how they group characters into lexeme, ie identifying what character is what tokenType is called **lexical grammar**
+ definition of regular language: can be recognised by a finite automaton
+ maximal munch: when a chunk of code makes sense under two lexical grammar, whichever matches the most characters win
+ exp: 'orchid' can be match under logical 'or' and string 'orchid'
+ a reserved word is an identifier
+ use java com.craftinginterpreters.lox.Lox to run
+ -- until this point, we turned string to a serioes of token, but it is not yet a parser
+
+
