@@ -11,4 +11,24 @@
  use java com.craftinginterpreters.lox.Lox to run
  -- until this point, we turned string to a serioes of token, but it is not yet a parser
 
+### Syntatic grammar
+- terminal: the end point
+- production: the rule of the grammar
+- nonterminal ???
+? under BNF, nonterminal is like a variable that should be replaced by production
+  - and any nonterminal should be constantly replaced until there isn't any nonterminal
+- breakfast under breakfast (breakfast  → protein "with" breakfast "on the side" ;): recursive nonterminal means language is not regular
+- because of the recursive pattern, we can have infinite number of string with finite grammar
 
+-- until 5.2 implementing syntax tree
+
+### Visitor pattern:
+- Every pastry must have accept to pass in the visitor
+- The pastry that will have some operation done will be passed in the visit method
+? so it is easy to add types, but how about operation, where do u add it in? 
+- visitor visit, pastry accept
+- one Visitor is one operation, and each visitor must implement function for different types (like binary, or pastry)
+- every type (or pastry) must have a method to accept any kind of visitor (or operation), and call the correct function like visitor.visitBinary()
+
+### Parsing expression:
+- right associative: right side get evaluate first 
